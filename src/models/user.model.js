@@ -5,31 +5,31 @@ import bcrypt from "bcrypt"
 const userSchema= new Schema(
     {
         username:{
-            type:string,
+            type:String,
             required:true,
             unique:true,
             trim:true,
             index:true
         },
         email:{
-            type:string,
+            type:String,
             required:true,
             unique:true,
             lowecase:true,
             trim:true,
         },
         fullName:{
-            type:string,
+            type:String,
             required:true,
             trim:true,
             index:true
         },
         avatar:{
-            type:string, // cloudnary url
+            type:String, // cloudnary url
             required:true,
         },
         coverimage:{
-            type:string,
+            type:String,
         },
         watchHistory:[
         {
@@ -38,11 +38,11 @@ const userSchema= new Schema(
         }
     ],
     password:{
-        type:string,
+        type:String,
         required:[true,'password is required']
     },
     refreshToken:{
-        type:string
+        type:String
     }
 },
 {
